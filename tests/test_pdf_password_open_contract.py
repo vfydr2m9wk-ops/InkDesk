@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+"""PDF: a password-protected PDF asks for its password when opened (both open paths), instead of failing."""
+from pathlib import Path
+
+SOURCE = (Path(__file__).resolve().parents[1] / "apps/pdf/io/file-open-controller.js").read_text(encoding="utf-8")
+
+
+def main():
+    assert "task.onPassword=" in SOURCE, "PDF open must answer pdf.js password requests"
+    assert "INCORRECT_PASSWORD" in SOURCE, "a wrong password must ask again"
+    assert "Password entry was cancelled." in SOURCE, "Cancel must stop the open with a clear error"
+    assert SOURCE.count("await withPassword(task)") == 2, "both the range open and the bytes open must ask for the password"
+    print("PDF password open contract: OK")
+
+
+if __name__ == "__main__":
+    main()

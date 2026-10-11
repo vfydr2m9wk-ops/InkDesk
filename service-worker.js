@@ -1,5 +1,5 @@
 'use strict';
-const CACHE_NAME='inkdos-v2.9.0-c20b6d509188cef4ae46';
+const CACHE_NAME='inkdos-v2.9.0-06421751eca674ab2979';
 // BEGIN OFFLINE HASHES
 const ASSET_HASHES={
   "./VERSION.json": "ce3955622e2396b498a197f49d58fdad5f13473ff4e1587db4538d05b0ecf654",
@@ -101,7 +101,7 @@ const ASSET_HASHES={
   "./apps/pdf/help/help.js": "9cfc68641fd55fd6cc9b2190483245175775f21896cda637fd48be2645e5d715",
   "./apps/pdf/index.html": "4f697c3518a36b7942ff3de860bdbce3e426ecc0e11098cbac6951dd32ae5c19",
   "./apps/pdf/io/file-delivery.js": "1a3423052004a5f313fec4cce0f259fb1810e895dca8a248515c78ff86bb382b",
-  "./apps/pdf/io/file-open-controller.js": "2eee97ff2bceefebd63f74cad81889154ff6b5a46fd87c01bebac57dde5f36f0",
+  "./apps/pdf/io/file-open-controller.js": "9bbcc7a9f91199479ee7470f8e0cb2c9b7459fbaeea84431e27f1248df0bab15",
   "./apps/pdf/io/pdf-worker.js": "55974feabadcae35091b4964dbd8440d2777db57cb7747100fb21e3569c62b12",
   "./apps/pdf/io/save-adapter.js": "22e197727343b5b743d7e27c9f4b708283f34fb2957209da00d35077c0167536",
   "./apps/pdf/io/save-controller.js": "82f83559d6697cffbcd3e2c7137f69453bf652c8a96f67ba2c04d9ebf0f5f183",

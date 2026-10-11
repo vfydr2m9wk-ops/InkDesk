@@ -110,6 +110,7 @@
       "formats": ["PDF"],
       "ownedPrefixes": ["apps/pdf/"],
       "smokeTests": [
+        "tests/test_pdf_password_open_contract.py",
         "tests/test_pdf_stability_contract.py",
         "tests/test_pdf_toolbar_25_contract.py",
         "tests/test_pdf_stability_offline_contract.py"
