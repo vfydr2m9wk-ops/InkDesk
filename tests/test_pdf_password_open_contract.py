@@ -7,6 +7,8 @@ SOURCE = (Path(__file__).resolve().parents[1] / "apps/pdf/io/file-open-controlle
 
 def main():
     assert "task.onPassword=" in SOURCE, "PDF open must answer pdf.js password requests"
+    assert "global.prompt" not in SOURCE, "web views such as XeOS block window.prompt: ask in the page"
+    assert "function askPassword(" in SOURCE and "input.type='password'" in SOURCE
     assert "INCORRECT_PASSWORD" in SOURCE, "a wrong password must ask again"
     assert "Password entry was cancelled." in SOURCE, "Cancel must stop the open with a clear error"
     assert SOURCE.count("await withPassword(task)") == 2, "both the range open and the bytes open must ask for the password"
