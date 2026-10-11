@@ -12,6 +12,9 @@ def main():
     assert "INCORRECT_PASSWORD" in SOURCE, "a wrong password must ask again"
     assert "Password entry was cancelled." in SOURCE, "Cancel must stop the open with a clear error"
     assert SOURCE.count("await withPassword(task)") == 2, "both the range open and the bytes open must ask for the password"
+    save = (Path(__file__).resolve().parents[1] / "apps/pdf/io/save-adapter.js").read_text(encoding="utf-8")
+    assert "NS.PdfPasswords.set(doc,given)" in SOURCE, "the accepted password must stay with its document"
+    assert "NS.PdfPasswords?.get(pdfDocument)" in save and "{password}" in save, "the save check must reopen an encrypted copy with its password"
     print("PDF password open contract: OK")
 
 
